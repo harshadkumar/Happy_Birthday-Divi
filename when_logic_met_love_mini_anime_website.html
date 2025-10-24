@@ -1,0 +1,254 @@
+<!-- When Logic Met Love – The Story of Harsh & Divi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Logic Met Love – The Story of Harsh & Divi</title>
+  <style>
+    @keyframes fadeZoomIn {
+      0% {opacity: 0; transform: scale(1.2);}
+      100% {opacity: 1; transform: scale(1);}
+    }
+    @keyframes floatPetals {
+      0% {transform: translateY(-10px) translateX(0); opacity: 0;}
+      50% {opacity: 1;}
+      100% {transform: translateY(800px) translateX(100px); opacity: 0;}
+    }
+    @keyframes fadeInScene {
+      0% {opacity: 0; transform: scale(1.05);}
+      100% {opacity: 1; transform: scale(1);}
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #d6c8f5;
+      color: #3a2e5e;
+      overflow-x: hidden;
+    }
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(120deg, #cbb4f9, #d9c8f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: fadeZoomIn 3s ease-in-out forwards;
+    }
+    .intro h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0 0 20px rgba(255,255,255,0.8);
+      animation: fadeZoomIn 3s ease-in-out;
+    }
+    .scene {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 1s ease-in-out;
+      animation: fadeInScene 2s ease forwards;
+    }
+    .overlay {
+      background: rgba(255,255,255,0.7);
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      animation: fadeZoomIn 2s ease-in-out;
+    }
+    .music-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.5);
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .petal {
+      position: fixed;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2917/2917995.png');
+      background-size: cover;
+      opacity: 0;
+      animation: floatPetals 10s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro" id="intro">
+    <h1>When Logic Met Love – The Story of Harshad & Divya</h1>
+  </div>
+
+  <div class="music-control" onclick="toggleMusic()">🎵 Play Music</div>
+  <audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/audio/2021/09/01/audio_b49c4bbfa9.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Petals -->
+  <script>
+    for (let i = 0; i < 10; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDelay = Math.random() * 10 + 's';
+      document.body.appendChild(petal);
+    }
+    setTimeout(() => {
+      document.getElementById('intro').style.display = 'none';
+    }, 4000);
+  </script>
+
+  <!-- Scene 1 -->
+  <div class="scene" style="background-image: url('First_Meet.jpg');">
+    <div class="overlay">
+      <h1>When Logic Met Love</h1>
+      <h2>The Story of Harshad & Divya</h2>
+      <p>He was a man of silence — a disciplined coder who spoke in logic and lived by schedules. Machines were his friends, and solitude was his comfort. He believed emotions were unpredictable… until destiny introduced him to Divi.</p>
+    </div>
+  </div>
+
+  <!-- Scene 2 -->
+  <div class="scene" 
+     style="background-image: url('First_Meet1\ \(2\).jpg'), url('FirstMeet2.jpg'), url('First_Meet1\ \(1\).jpg'); 
+            height: 500px; 
+            background-size: contain, contain, contain; 
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            background-position: left center, center center, right center;">
+    <div class="overlay">
+      <h2>Arranged Marriage Visit</h2>
+      <p>The day she entered his house, time paused. Her smile carried innocence, her eyes reflected kindness — and for the first time, the coder’s heart skipped a line of code.</p>
+    </div>
+  </div>
+
+  <!-- Scene 3 -->
+  <div class="scene" style="background-image: url('First_Date.jpg');">
+    <div class="overlay">
+      <h2>The First Date – Bangalore Café</h2>
+      <p>Two shy souls sat across a table. Minutes passed in silence — no words, just glances. And then she smiled… that smile melted the walls he had built for years.</p>
+    </div>
+  </div>
+
+  <!-- Scene 4 -->
+   <div class="scene" 
+     style="background-image: url('Anger2.jpg'), url('Anger.jpg'), url('Anger3.jpg'); 
+            height: 500px; 
+            background-size: contain, contain, contain; 
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            background-position: left center, center center, right center;">
+    <div class="overlay">
+      <h2>Her Anger Moments</h2>
+      <p>Sometimes she gets angry — goes completely silent. And he, the man who could solve any algorithm, now spends hours decoding her moods. It’s the sweetest puzzle he never wants to solve.</p>
+    </div>
+  </div>
+
+  <!-- Scene 5 -->
+  <div class="scene" 
+     style="background-image: url('Trip.jpg'), url('Trip2.jpg'), url('Trip3.jpg'); 
+            height: 500px; 
+            background-size: contain, contain, contain; 
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            background-position: left center, center center, right center;">
+    <div class="overlay">
+      <h2>Trip Montage</h2>
+      <p>Then came their trips — Bangalore’s laughter, Karad’s food adventures, long walks, endless teasing. Both foodies, discovering new flavors and discovering each other.</p>
+    </div>
+  </div>
+
+  <!-- Scene 6 -->
+ <div class="scene" style="background-image: url('Metro.jpg'), url('Metro2.jpg'); 
+            height: 500px; 
+            background-size: contain, contain; 
+            background-repeat: no-repeat, no-repeat; 
+            background-position: left center, right center;">
+    <div class="overlay">
+      <h2>The Metro Scene</h2>
+      <p>Inside a crowded metro, she tried to hold the top rod — but her height said no. Without a word, he pulled her gently into his arms. She smiled, leaned in… and for that entire journey, the world disappeared.</p>
+    </div>
+  </div>
+
+  <!-- Scene 7 -->
+  <div class="scene" 
+     style="background-image: url('Videocall.jpg'), url('Videocall2.jpg'), url('VideoCall3.jpg'); 
+            height: 500px; 
+            background-size: contain, contain, contain; 
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            background-position: left center, center center, right center;">
+    <div class="overlay">
+      <h2>Distance Love</h2>
+      <p>Distance came — miles apart, but never hearts. They lived through video calls, shared smiles through screens, sent surprises and flower bouquets, each petal carrying love across cities.</p>
+    </div>
+  </div>
+
+  <!-- Scene 8 -->
+  <div class="scene" style="background-image: url('Dream.jpg'), url('Dream2.jpg'); 
+            height: 500px; 
+            background-size: contain, contain; 
+            background-repeat: no-repeat, no-repeat; 
+            background-position: left center, right center;">
+    <div class="overlay">
+      <h2>Her Dreams & Cooking</h2>
+      <p>Divi — a kind soul, a gifted cook, a woman with dreams. Her world smells of homemade chocolates and cakes — and he knows, someday soon, she’ll build her dream kitchen of happiness. He’ll be right there — her proud taste-tester and biggest cheerleader.</p>
+    </div>
+  </div>
+
+  <!-- Scene 9 -->
+  <div class="scene" style="background-image: url('Grace.jpg'), url('Grace2.jpg'); 
+            height: 500px; 
+            background-size: contain, contain; 
+            background-repeat: no-repeat, no-repeat; 
+            background-position: left center, right center;">
+    <div class="overlay">
+      <h2>She Changed Him</h2>
+      <p>She changed him — from a man of machines to a man of feelings. She added color to his grayscale world. Now every plan he makes includes her name… every heartbeat spells Divi.</p>
+    </div>
+  </div>
+
+  <!-- Scene 10 -->
+  <div class="scene" 
+     style="background-image: url('Birthday.jpg'), url('Birthday1.jpg'), url('Birthday2.jpg'); 
+            height: 500px; 
+            background-size: contain, contain, contain; 
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            background-position: left center, center center, right center;">
+
+    <div class="overlay">
+      <h2>Birthday Finale</h2>
+      <p>I was a man of logic, but you, Divi, became the only emotion I never want to decode. You taught me that love isn’t planned — it’s felt. You didn’t just enter my life… you became my life.</p>
+      <h3>Happy Birthday, Divi 🎂</h3>
+      <p>— From the man who never believed in love, until he met you. ❤️</p>
+    </div>
+  </div>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    let playing = false;
+    function toggleMusic() {
+      if (playing) {
+        music.pause();
+        document.querySelector('.music-control').innerText = '🎵 Play Music';
+      } else {
+        music.play();
+        document.querySelector('.music-control').innerText = '⏸ Pause Music';
+      }
+      playing = !playing;
+    }
+  </script>
+</body>
+</html>
